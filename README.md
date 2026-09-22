@@ -28,10 +28,12 @@ An external antenna is included with the [standalone board](https://raspiaudio.c
 3. Supply 5 V through USB-C or the header, according to your assembly. Power down both boards before stacking or changing cables.
 4. For the Voice DSP+ satellite, follow the [Home Assistant / ESPHome setup](https://github.com/RASPIAUDIO/raspiaudio.github.io/tree/main/ZeroCoreS3/HomeAssistant).
 
-For a radio build, the [Digital Radio shield ESP32 application](https://github.com/RASPIAUDIOadmin/Digital-Radio-for-Raspberry-Pi/tree/main/esp32/zerocore_s3_digital_radio)
-documents the GPIO mapping, firmware build and serial controls. FM reception
-and analog audio were validated with the shield attached to a ZeroCore S3.
-The application's README records the current DAB limitations.
+For a radio build, [install CoreZero Digital Radio in the browser](https://apps.raspiaudio.com/#device=ZeroCoreS3&application=DigitalRadio)
+or build the [Digital Radio shield ESP32 application](https://github.com/RASPIAUDIOadmin/Digital-Radio-for-Raspberry-Pi/tree/main/esp32/zerocore_s3_digital_radio)
+from source. The application documents GPIO mapping, serial controls and its
+local web page. FM and DAB+ reception and analog audio were validated with the
+shield attached to a ZeroCore S3. The browser installer replaces the current
+ESP32 firmware and settings.
 
 The header has a familiar physical layout, but its signals are **ESP32-S3 signals**. Raspberry Pi software GPIO numbers and HAT compatibility do not follow from the connector shape. The GPIO are 3.3 V logic; do not apply 5 V to a GPIO or the 3V3 pins. Pins 26 (GPIO0) and 37 (GPIO3) are boot strapping pins, so external circuits must not force the wrong level during reset. The 5 V power path was designed with a 3 A target, but that is not a measured continuous current rating for an assembled product.
 
@@ -43,3 +45,4 @@ The public documentation describes the September 2026 board design. The latest p
 - [ZeroCore S3 product page](https://raspiaudio.com/product/corezero-s3/)
 - [Home Assistant integration](https://github.com/RASPIAUDIO/raspiaudio.github.io/tree/main/ZeroCoreS3/HomeAssistant)
 - [Digital Radio shield application](https://github.com/RASPIAUDIOadmin/Digital-Radio-for-Raspberry-Pi/tree/main/esp32/zerocore_s3_digital_radio)
+- [CoreZero Digital Radio web installer](https://apps.raspiaudio.com/#device=ZeroCoreS3&application=DigitalRadio)
