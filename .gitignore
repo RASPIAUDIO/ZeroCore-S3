@@ -1,0 +1,14 @@
+# Keep hardware design sources and manufacturing outputs out of this public repository.
+*.epro2
+*.epru
+*.schdoc
+*.pcbdoc
+*.kicad_sch
+*.kicad_pcb
+*.gbr
+*.ger
+*.drl
+*.step
+*.stp
+*.pdf
+*.zip
